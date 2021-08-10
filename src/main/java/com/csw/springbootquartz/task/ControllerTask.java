@@ -9,9 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ControllerTask {
-
     private static final ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
-
     @Autowired
     private SchedulerJobService schedulerJobService;
 

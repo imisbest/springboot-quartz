@@ -15,9 +15,7 @@ public class ControllerTask2 {
 
     public static void stopJob() {
         System.out.println("打断当前任务");
-        if (threadPoolTaskScheduler != null) {
-            threadPoolTaskScheduler.destroy();
-        }
+        threadPoolTaskScheduler.destroy();
     }
 
     public void run() {
