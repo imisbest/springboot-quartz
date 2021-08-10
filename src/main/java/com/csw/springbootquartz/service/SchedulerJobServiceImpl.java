@@ -1,7 +1,7 @@
 package com.csw.springbootquartz.service;
 
 import com.csw.springbootquartz.dao.SchedulerJobDao;
-import com.csw.springbootquartz.entiey.SchedulerJob;
+import com.csw.springbootquartz.entity.SchedulerJob;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

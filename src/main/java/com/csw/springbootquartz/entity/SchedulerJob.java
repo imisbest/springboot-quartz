@@ -1,4 +1,4 @@
-package com.csw.springbootquartz.entiey;
+package com.csw.springbootquartz.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;

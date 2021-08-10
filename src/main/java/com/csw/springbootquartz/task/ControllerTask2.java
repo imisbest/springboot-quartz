@@ -8,20 +8,20 @@ import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ControllerTask {
-
+public class ControllerTask2 {
     private static final ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
-
     @Autowired
     private SchedulerJobService schedulerJobService;
 
     public static void stopJob() {
         System.out.println("打断当前任务");
-        threadPoolTaskScheduler.destroy();
+        if (threadPoolTaskScheduler != null) {
+            threadPoolTaskScheduler.destroy();
+        }
     }
 
     public void run() {
-        ControllerTask.stopJob();
+        ControllerTask2.stopJob();
         threadPoolTaskScheduler.initialize();
         SchedulerJob schedulerJob = schedulerJobService.findByid("a823f7054ac640c7a4ed0fef4e994c06");
         System.out.println("进入定时任务" + schedulerJob);
